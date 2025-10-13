@@ -223,9 +223,9 @@
         adjust_layer {
             display-name = "Adjust";
             bindings = <
-            &bt0          &bt1          &bt2        &out OUT_USB    &bt BT_CLR      &none           &mmv MOVE_UP    &none            &none            &none
-            &none         &none         &mkp MB2    &mkp MB1        &none           &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &none            &none
-&kp C_MUTE  &kp C_VOL_DN  &kp C_VOL_UP  &kp C_PREV  &msc SCRL_DOWN  &msc SCRL_UP    &msc SCRL_LEFT  &msc SCRL_DOWN  &msc SCRL_UP     &msc SCRL_RIGHT  &none  &none
+            &kp F1        &kp F2        &kp F3      &kp F4          &kp F5          &none           &mmv MOVE_UP    &none            &none            &kp F10
+            &none         &none         &mkp MB2    &mkp MB1        &none           &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &none            &kp F11
+&kp C_MUTE  &kp C_VOL_DN  &kp C_VOL_UP  &kp C_PREV  &msc SCRL_DOWN  &msc SCRL_UP    &msc SCRL_LEFT  &msc SCRL_DOWN  &msc SCRL_UP     &msc SCRL_RIGHT  &none    &kp F12
                                         &none       &none           &none           &none           &none           &none
             >;
         };
