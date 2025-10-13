@@ -8,7 +8,6 @@
 
 #include <dt-bindings/zmk/pointing.h>
 
-
 / {
     behaviors {
         hml: home_row_mod_left {
@@ -187,8 +186,8 @@
             display-name = "Base";
             bindings = <
          &kp B         &kp L        &kp D        &kp W          &kp Z           &sqtundr      &kp F         &kp O        &kp U        &kp J
-         &hml LCTRL N  &hml LALT R  &hml LGUI T  &hml LSHFT S   &kp G           &kp Y         &hmr RSHFT H  &hmr RGUI A  &hmr RALT E  &hmr RCTRL I
-&kp ESC  &kp Q         &kp X        &kp M        &kp C          &kp V           &kp K         &kp P         &dotcolon    &mindqt      &commsemi     &ltt 4 TAB
+         &hml LCTRL N  &hml LALT R  &hml LGUI T  &hml LSHFT S   &kp G           &kp Y         &hmr RSHFT H  &hmr RGUI A  &hmr RALT E  &ltt 4 I
+&kp ESC  &kp Q         &kp X        &kp M        &kp C          &kp V           &kp K         &kp P         &dotcolon    &mindqt      &commsemi  &hmr RCTRL TAB
                                     &none        &kp BACKSPACE  &ltt 2 SPACE    &ltt 1 ENTER  &mkp LCLK     &none
             >;
         };
