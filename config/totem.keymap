@@ -234,10 +234,10 @@
         layer_4 {
             display-name = "Adjust";
             bindings = <
-            &bt0          &bt1          &bt2        &out OUT_USB    &bt BT_CLR      &none           &mmv MOVE_UP    &none            &none            &none
-            &none         &none         &mkp MB2    &mkp MB1        &none           &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &none            &none
-&kp C_MUTE  &kp C_VOL_DN  &kp C_VOL_UP  &kp C_PREV  &msc SCRL_DOWN  &msc SCRL_UP    &msc SCRL_LEFT  &msc SCRL_DOWN  &msc SCRL_UP     &msc SCRL_RIGHT  &none  &none
-                                        &none       &none           &none           &none           &none           &none
+            &bt0          &mkp MB2        &mmv MOVE_UP    &mkp MB1         &none           &none           &none           &kp UP          &none            &none
+            &none         &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &none           &none           &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT        &none
+&kp C_MUTE  &kp C_VOL_DN  &kp C_VOL_UP    &kp C_PREV      &msc SCRL_DOWN   &msc SCRL_UP    &msc SCRL_LEFT  &msc SCRL_DOWN  &msc SCRL_UP    &msc SCRL_RIGHT  &none  &none
+                                          &none           &none            &none           &none           &none           &none
             >;
         };
     };
