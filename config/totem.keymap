@@ -156,7 +156,7 @@
 
         combo_caps_word {
             timeout-ms = <30>;
-            key-positions = <13 16>; // SH
+            key-positions = <13 12>; // SH
             layers = <0>;
             bindings = <&caps_word>;
         };
@@ -180,10 +180,10 @@
         base_layer {
             display-name = "Base";
             bindings = <
-                  &kp B         &kp L        &kp D        &kp W          &kp Z           &sqtundr      &kp F         &kp O        &kp U        &kp J
-                  &hml LCTRL N  &hml LALT R  &hml LGUI T  &hml LSHFT S   &kp G           &kp Y         &hmr RSHFT H  &hmr RGUI A  &hmr RALT E  &hmr RCTRL I
-&mt ESC CAPSLOCK  &kp Q         &kp X        &kp M        &kp C          &kp V           &kp K         &kp P         &dotcolon    &mindqt      &commsemi     &lt 3 TAB
-                                             &none        &kp BACKSPACE  &ltt 2 SPACE    &ltt 1 ENTER  &mkp LCLK     &none
+         &kp B         &kp L        &kp D        &kp W          &kp Z           &sqtundr      &kp F         &kp O        &kp U        &kp J
+         &hml LCTRL N  &hml LALT R  &hml LGUI T  &hml LSHFT S   &kp G           &kp Y         &hmr RSHFT H  &hmr RGUI A  &hmr RALT E  &hmr RCTRL I
+&kp ESC  &kp Q         &kp X        &kp M        &kp C          &kp V           &kp K         &kp P         &dotcolon    &mindqt      &commsemi     &ltt 3 TAB
+                                    &none        &kp BACKSPACE  &ltt 2 SPACE    &ltt 1 ENTER  &mkp LCLK     &none
             >;
         };
 
@@ -193,10 +193,10 @@
         lower_layer {
             display-name = "Lower";
             bindings = <
-           &kp KP_MINUS  &kp N7  &kp N8  &kp N9  &kp KP_PLUS        &kp PRCNT  &kp LBKT   &kp LPAR   &kp RPAR   &kp RBKT
-           &kp N0        &kp N4  &kp N5  &kp N6  &kp KP_EQUAL       &kp LEFT   &kp DOWN   &kp UP     &kp RIGHT  &kp KP_DOT
-&kp COLON  &kp KP_SLASH  &kp N1  &kp N2  &kp N3  &kp KP_ASTERISK    &kp HOME   &kp PG_DN  &kp PG_UP  &kp END    &kp X       &kp B
-                                 &trans  &trans  &trans             &none      &trans     &trans
+           &kp KP_MINUS  &kp N7  &kp N8  &kp N9  &kp KP_PLUS        &kp PRCNT  &kp UP_ARROW  &kp LPAR   &kp RPAR  &kp KP_DOT
+           &kp N0        &kp N4  &kp N5  &kp N6  &kp KP_EQUAL       &kp LEFT   &kp DOWN      &kp RIGHT  &kp LBKT  &kp RBKT
+&kp COLON  &kp KP_SLASH  &kp N1  &kp N2  &kp N3  &kp KP_ASTERISK    &kp HOME   &kp PG_DN     &kp PG_UP  &kp END   &kp X       &kp B
+                                 &trans  &trans  &trans             &none      &trans        &trans
             >;
         };
 
@@ -219,10 +219,10 @@
         adjust_layer {
             display-name = "Adjust";
             bindings = <
-            &bt0          &bt1          &bt2        &out OUT_USB  &bt BT_CLR    &none           &mmv MOVE_UP    &none            &none            &none
-            &none         &none         &mkp MB2    &mkp MB1      &none         &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &none            &none
-&kp C_MUTE  &kp C_VOL_DN  &kp C_VOL_UP  &kp C_PREV  &kp C_PP      &kp C_NEXT    &msc SCRL_LEFT  &msc SCRL_DOWN  &msc SCRL_UP     &msc SCRL_RIGHT  &none  &none
-                                        &none       &none         &none         &none           &none           &none
+            &bt0          &bt1          &bt2        &out OUT_USB    &bt BT_CLR      &none           &mmv MOVE_UP    &none            &none            &none
+            &none         &none         &mkp MB2    &mkp MB1        &none           &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &none            &none
+&kp C_MUTE  &kp C_VOL_DN  &kp C_VOL_UP  &kp C_PREV  &msc SCRL_DOWN  &msc SCRL_UP    &msc SCRL_LEFT  &msc SCRL_DOWN  &msc SCRL_UP     &msc SCRL_RIGHT  &none  &none
+                                        &none       &none           &none           &none           &none           &none
             >;
         };
     };
