@@ -119,6 +119,13 @@
             #binding-cells = <0>;
             bindings = <&out OUT_BLE &bt BT_SEL 2>;
         };
+
+        win_Shift: win_Shift {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LEFT_GUI &kp LEFT_SHIFT>;
+            label = "WIN_SHIFT";
+        };
     };
 
     combos {
@@ -236,7 +243,7 @@
             &bt0          &mkp MB2        &mmv MOVE_UP    &mkp MB1         &none           &none           &none           &kp UP          &none            &none
             &kp LEFT_GUI  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &none           &none           &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT        &none
 &kp C_MUTE  &kp C_VOL_DN  &kp C_VOL_UP    &kp C_PREV      &msc SCRL_DOWN   &msc SCRL_UP    &msc SCRL_LEFT  &msc SCRL_DOWN  &msc SCRL_UP    &msc SCRL_RIGHT  &none  &none
-                                          &none           &kp LEFT_SHIFT   &none           &kp ENTER       &mkp MB1        &none
+                                          &none           &win_Shift       &none           &kp ENTER       &mkp MB1        &none
             >;
         };
     };
