@@ -123,7 +123,10 @@
         win_Shift: win_Shift {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LEFT_GUI &kp LEFT_SHIFT>;
+            bindings =
+                <&kp LEFT_GUI &kp LEFT_SHIFT>,
+                <&macro_pause_for_release>;
+
             label = "WIN_SHIFT";
         };
     };
