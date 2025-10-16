@@ -99,6 +99,18 @@
 
             mods = <(MOD_LSFT)>;
         };
+
+        lmt: layer_mouse_thumb {
+            compatible = "zmk,behavior-hold-tap";
+            display-name = "Layer-Tap";
+            #binding-cells = <2>;
+            flavor = "balanced";
+            tapping-term-ms = <280>;
+            quick-tap-ms = <175>;
+            bindings = <&mo>, <&mkp>;
+
+            label = "LAYER_MOUSE_THUMB";
+        };
     };
 
     macros {
@@ -125,6 +137,13 @@
             #binding-cells = <0>;
             bindings = <&sk LEFT_GUI &sk LEFT_SHIFT>;
             label = "WIN_SHIFT";
+        };
+
+        ime_toggle: ime_toggle {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LEFT_ALT &kp GRAVE>;
+            label = "IME_TOGGLE";
         };
     };
 
@@ -191,10 +210,10 @@
         base_layer {
             display-name = "Base";
             bindings = <
-         &kp B         &kp L        &kp D        &kp W          &kp Z           &sqtundr      &kp F         &kp O        &kp U        &kp J
-         &hml LCTRL N  &hml LALT R  &hml LGUI T  &hml LSHFT S   &kp G           &kp Y         &hmr RSHFT H  &hmr RGUI A  &hmr RALT E  &ltt 4 I
-&kp ESC  &kp Q         &kp X        &kp M        &kp C          &kp V           &kp K         &kp P         &dotcolon    &mindqt      &commsemi  &hmr RCTRL TAB
-                                    &kp DELETE   &kp BACKSPACE  &ltt 2 SPACE    &ltt 1 ENTER  &mkp LCLK     &none
+         &kp B         &kp L              &kp D            &kp W            &kp Z            &sqtundr      &kp F             &kp O             &kp U               &kp J
+         &hml LCTRL N  &hml LEFT_SHIFT R  &hml LEFT_ALT T  &hml LEFT_GUI S  &kp G            &kp Y         &hmr RIGHT_GUI H  &hmr RIGHT_ALT A  &hmr RIGHT_SHIFT E  &ltt 4 I
+&kp ESC  &kp Q         &kp X              &kp M            &kp C            &kp V            &kp K         &kp P             &dotcolon         &mindqt             &commsemi  &hmr RCTRL TAB
+                                          &kp DELETE       &ltt 2 SPACE     &kp BACKSPACE    &ltt 1 ENTER  &lmt 1 MB1        &none
             >;
         };
 
@@ -243,7 +262,7 @@
             &bt0          &mkp MB2        &mmv MOVE_UP    &mkp MB1         &none           &none           &none           &kp UP          &none            &none
             &kp LEFT_GUI  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &none           &none           &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT        &none
 &kp C_MUTE  &kp C_VOL_DN  &kp C_VOL_UP    &kp C_PREV      &msc SCRL_DOWN   &msc SCRL_UP    &msc SCRL_LEFT  &msc SCRL_DOWN  &msc SCRL_UP    &msc SCRL_RIGHT  &none  &none
-                                          &none           &win_Shift       &none           &kp ENTER       &mkp MB1        &none
+                                          &none           &win_Shift       &none           &kp ENTER       &mkp MB1        &tog 4
             >;
         };
     };
