@@ -111,29 +111,6 @@
 
             label = "LAYER_MOUSE_THUMB";
         };
-
-        lpr: lateral-page-right {
-            compatible = "zmk,behavior-tap-dance";
-            label = "lateral-page-right";
-            #binding-cells = <0>;
-            tapping-term-ms = <250>;
-            bindings = <&msc SCRL_UP>, <&msc SCRL_RIGHT>;
-        };
-
-        lpl: lateral-page-left {
-            compatible = "zmk,behavior-tap-dance";
-            label = "lateral-page-left";
-            #binding-cells = <0>;
-            tapping-term-ms = <250>;
-            bindings = <&msc SCRL_DOWN>, <&msc SCRL_LEFT>;
-        };
-        ltt_lock: layer_tap_toggle {
-          compatible = "zmk,behavior-hold-tap";
-          #binding-cells = <0>;
-          bindings = <&mo LOWER>, <&tog LOWER>;
-          tapping-term-ms = <280>;
-          flavor = "balanced";
-        };
     };
 
     macros {
@@ -309,8 +286,8 @@
             display-name = "Adjust";
             bindings = <
             &kp F1        &kp F2        &kp F3    &kp F4          &kp F5    &bt BT_CLR_ALL  &mmv MOVE_UP    &none            &none            &kp F10
-            &kp LEFT_ALT  &none         &mkp MB2  &mkp MB1        &lpr      &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &none            &kp F11
-&kp C_MUTE  &kp C_VOL_DN  &kp C_VOL_UP  &none     &msc SCRL_DOWN  &lpl      &msc SCRL_LEFT  &msc SCRL_DOWN  &msc SCRL_UP     &msc SCRL_RIGHT  &none    &kp F12
+            &kp LEFT_ALT  &none         &mkp MB2  &mkp MB1        &none     &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &none            &kp F11
+&kp C_MUTE  &kp C_VOL_DN  &kp C_VOL_UP  &none     &msc SCRL_DOWN  &none     &msc SCRL_LEFT  &msc SCRL_DOWN  &msc SCRL_UP     &msc SCRL_RIGHT  &none    &kp F12
                                         &none     &none           &none     &none           &none           &none
             >;
         };
