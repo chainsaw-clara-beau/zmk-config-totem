@@ -116,7 +116,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "lateral-page-right";
             #binding-cells = <0>;
-            tapping-term-ms = <200>;
+            tapping-term-ms = <250>;
             bindings = <&msc SCRL_UP>, <&msc SCRL_RIGHT>;
         };
 
@@ -124,7 +124,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "lateral-page-left";
             #binding-cells = <0>;
-            tapping-term-ms = <200>;
+            tapping-term-ms = <250>;
             bindings = <&msc SCRL_DOWN>, <&msc SCRL_LEFT>;
         };
     };
@@ -165,8 +165,29 @@
         alt_funcfour: alt_funcfour {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LEFT_ALT &kp F4>;
+            bindings = <&kp LA(F4)>;
             label = "ALT_FUNCFOUR";
+        };
+
+        ctrl_c: ctrl_c {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LC(C)>;
+            label = "CTRL_C";
+        };
+
+        ctrl_v: ctrl_v {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LC(V)>;
+            label = "CTRL_V";
+        };
+
+        ctrl_x: ctrl_x {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LC(X)>;
+            label = "CTRL_X";
         };
     };
 
@@ -219,6 +240,24 @@
             key-positions = <11 12 13>;
             slow-release;
             timeout-ms = <30>;
+            layers = <4>;
+        };
+
+        ctrl_c {
+            bindings = <&ctrl_c>;
+            key-positions = <10 24>;
+            layers = <4>;
+        };
+
+        ctrl_v {
+            bindings = <&ctrl_v>;
+            key-positions = <10 25>;
+            layers = <4>;
+        };
+
+        ctrl_x {
+            bindings = <&ctrl_x>;
+            key-positions = <10 22>;
             layers = <4>;
         };
     };
@@ -290,10 +329,10 @@
         layer_4 {
             display-name = "layer4";
             bindings = <
-            &bt0          &mkp MB2        &mmv MOVE_UP    &mkp MB1         &none    &none           &none           &kp UP          &none            &none
-            &none         &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &lpr     &none           &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT        &none
-&kp C_MUTE  &kp C_VOL_DN  &kp C_VOL_UP    &none           &none            &lpl     &msc SCRL_LEFT  &msc SCRL_DOWN  &msc SCRL_UP    &msc SCRL_RIGHT  &none  &none
-                                          &none           &win_Shift       &none    &kp ENTER       &mkp MB1        &sl 4
+            &bt0          &mkp MB2        &mmv MOVE_UP    &mkp MB1         &none              &none           &none           &kp UP          &none            &none
+            &none         &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &msc SCRL_RIGHT    &none           &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT        &none
+&kp C_MUTE  &kp C_VOL_DN  &kp C_VOL_UP    &msc SCRL_LEFT  &msc SCRL_DOWN   &msc SCRL_UP       &msc SCRL_LEFT  &msc SCRL_DOWN  &msc SCRL_UP    &msc SCRL_RIGHT  &none  &none
+                                          &none           &win_Shift       &none              &kp ENTER       &mkp MB1        &sl 4
             >;
         };
     };
