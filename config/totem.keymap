@@ -127,6 +127,13 @@
             tapping-term-ms = <250>;
             bindings = <&msc SCRL_DOWN>, <&msc SCRL_LEFT>;
         };
+        ltt_lock: layer_tap_toggle {
+          compatible = "zmk,behavior-hold-tap";
+          #binding-cells = <0>;
+          bindings = <&mo LOWER>, <&tog LOWER>;
+          tapping-term-ms = <280>;
+          flavor = "balanced";
+        };
     };
 
     macros {
