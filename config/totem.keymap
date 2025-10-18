@@ -111,6 +111,22 @@
 
             label = "LAYER_MOUSE_THUMB";
         };
+
+        lpr: lateral-page-right {
+            compatible = "zmk,behavior-tap-dance";
+            label = "lateral-page-right";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&msc SCRL_UP>, <&msc SCRL_RIGHT>;
+        };
+
+        lpl: lateral-page-left {
+            compatible = "zmk,behavior-tap-dance";
+            label = "lateral-page-left";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&msc SCRL_DOWN>, <&msc SCRL_LEFT>;
+        };
     };
 
     macros {
@@ -200,7 +216,10 @@
 
         close_window {
             bindings = <&alt_funcfour>;
-            key-positions = <3 12 11>;
+            key-positions = <11 12 13>;
+            slow-release;
+            timeout-ms = <30>;
+            layers = <4>;
         };
     };
 
@@ -261,20 +280,20 @@
         adjust_layer {
             display-name = "Adjust";
             bindings = <
-            &kp F1        &kp F2        &kp F3      &kp F4          &kp F5          &bt BT_CLR_ALL  &mmv MOVE_UP    &none            &none            &kp F10
-            &kp LEFT_ALT  &none         &mkp MB2    &mkp MB1        &none           &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &none            &kp F11
-&kp C_MUTE  &kp C_VOL_DN  &kp C_VOL_UP  &kp C_PREV  &msc SCRL_DOWN  &msc SCRL_UP    &msc SCRL_LEFT  &msc SCRL_DOWN  &msc SCRL_UP     &msc SCRL_RIGHT  &none    &kp F12
-                                        &none       &none           &none           &none           &none           &none
+            &kp F1        &kp F2        &kp F3    &kp F4          &kp F5    &bt BT_CLR_ALL  &mmv MOVE_UP    &none            &none            &kp F10
+            &kp LEFT_ALT  &none         &mkp MB2  &mkp MB1        &lpr      &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &none            &kp F11
+&kp C_MUTE  &kp C_VOL_DN  &kp C_VOL_UP  &none     &msc SCRL_DOWN  &lpl      &msc SCRL_LEFT  &msc SCRL_DOWN  &msc SCRL_UP     &msc SCRL_RIGHT  &none    &kp F12
+                                        &none     &none           &none     &none           &none           &none
             >;
         };
 
         layer_4 {
-            display-name = "Adjust";
+            display-name = "layer4";
             bindings = <
-            &bt0          &mkp MB2        &mmv MOVE_UP    &mkp MB1         &none           &none           &none           &kp UP          &none            &none
-            &kp LEFT_GUI  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &none           &none           &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT        &none
-&kp C_MUTE  &kp C_VOL_DN  &kp C_VOL_UP    &kp C_PREV      &msc SCRL_DOWN   &msc SCRL_UP    &msc SCRL_LEFT  &msc SCRL_DOWN  &msc SCRL_UP    &msc SCRL_RIGHT  &none  &none
-                                          &none           &win_Shift       &none           &kp ENTER       &mkp MB1        &sl 4
+            &bt0          &mkp MB2        &mmv MOVE_UP    &mkp MB1         &none    &none           &none           &kp UP          &none            &none
+            &none         &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &lpr     &none           &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT        &none
+&kp C_MUTE  &kp C_VOL_DN  &kp C_VOL_UP    &none           &none            &lpl     &msc SCRL_LEFT  &msc SCRL_DOWN  &msc SCRL_UP    &msc SCRL_RIGHT  &none  &none
+                                          &none           &win_Shift       &none    &kp ENTER       &mkp MB1        &sl 4
             >;
         };
     };
