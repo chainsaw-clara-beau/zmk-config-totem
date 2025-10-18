@@ -145,6 +145,13 @@
             bindings = <&kp LEFT_ALT &kp GRAVE>;
             label = "IME_TOGGLE";
         };
+
+        alt_funcfour: alt_funcfour {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LEFT_ALT &kp F4>;
+            label = "ALT_FUNCFOUR";
+        };
     };
 
     combos {
@@ -189,6 +196,11 @@
         combo_caps_word {
             bindings = <&caps_word>;
             key-positions = <14 13 15>;
+        };
+
+        close_window {
+            bindings = <&alt_funcfour>;
+            key-positions = <3 12 11>;
         };
     };
 
@@ -250,7 +262,7 @@
             display-name = "Adjust";
             bindings = <
             &kp F1        &kp F2        &kp F3      &kp F4          &kp F5          &bt BT_CLR_ALL  &mmv MOVE_UP    &none            &none            &kp F10
-            &none         &none         &mkp MB2    &mkp MB1        &none           &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &none            &kp F11
+            &kp LEFT_ALT  &none         &mkp MB2    &mkp MB1        &none           &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &none            &kp F11
 &kp C_MUTE  &kp C_VOL_DN  &kp C_VOL_UP  &kp C_PREV  &msc SCRL_DOWN  &msc SCRL_UP    &msc SCRL_LEFT  &msc SCRL_DOWN  &msc SCRL_UP     &msc SCRL_RIGHT  &none    &kp F12
                                         &none       &none           &none           &none           &none           &none
             >;
