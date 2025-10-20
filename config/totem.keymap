@@ -229,7 +229,7 @@
 
         application {
             bindings = <&kp K_APP>;
-            key-positions = <13 35>;
+            key-positions = <13 11>;
             timeout-ms = <60>;
             layers = <0>;
         };
