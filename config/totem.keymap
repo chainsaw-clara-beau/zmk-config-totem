@@ -226,6 +226,13 @@
             timeout-ms = <30>;
             layers = <4>;
         };
+
+        application {
+            bindings = <&kp K_APP>;
+            key-positions = <16 17>;
+            timeout-ms = <30>;
+            layers = <0>;
+        };
     };
 
     conditional_layers {
