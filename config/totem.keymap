@@ -229,8 +229,8 @@
 
         application {
             bindings = <&kp K_APP>;
-            key-positions = <16 17>;
-            timeout-ms = <30>;
+            key-positions = <13 35>;
+            timeout-ms = <60>;
             layers = <0>;
         };
     };
