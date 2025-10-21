@@ -266,9 +266,9 @@
         lower_layer {
             display-name = "Lower";
             bindings = <
-           &kp KP_MINUS  &kp N7  &kp N8  &kp N9  &kp KP_PLUS        &kp PRCNT  &kp UP_ARROW   &kp LPAR   &kp RPAR  &kp KP_DOT
-           &kp N0        &kp N4  &kp N5  &kp N6  &kp KP_EQUAL       &kp LEFT   &kp RIGHT_GUI  &kp RIGHT  &kp LBKT  &kp RBKT
-&kp COLON  &kp KP_SLASH  &kp N1  &kp N2  &kp N3  &kp KP_ASTERISK    &kp HOME   &kp PG_DN      &kp PG_UP  &kp END   &kp X       &kp B
+           &kp KP_MINUS  &kp N7  &kp N8  &kp N9  &kp KP_PLUS        &kp PRCNT  &kp UP_ARROW   &kp LPAR              &kp RPAR               &kp KP_DOT
+           &kp N0        &kp N4  &kp N5  &kp N6  &kp KP_EQUAL       &kp LEFT   &kp RIGHT_GUI  &hmr RIGHT_ALT RIGHT  &hmr RIGHT_SHIFT LBKT  &hmr RCTRL RBKT
+&kp COLON  &kp KP_SLASH  &kp N1  &kp N2  &kp N3  &kp KP_ASTERISK    &kp HOME   &kp PG_DN      &kp PG_UP             &kp END                &kp X            &kp B
                                  &trans  &trans  &trans             &none      &trans         &trans
             >;
         };
@@ -279,10 +279,10 @@
         upper_layer {
             display-name = "Upper";
             bindings = <
-           &kp TILDE  &kp DOT   &kp ASTRK  &kp AMPS  &kp AT      &kp PRCNT  &kp LBKT   &kp LPAR   &kp RPAR   &kp RBKT
-           &kp LT     &kp PIPE  &kp MINUS  &kp GT    &kp FSLH    &kp EXCL   &kp COMMA  &kp LBRC   &kp RBRC   &kp SEMI
-&kp UNDER  &kp GRAVE  &kp SQT   &kp DQT    &kp PLUS  &kp BSLH    &kp HASH   &kp CARET  &kp COLON  &kp EQUAL  &kp DLLR  &kp QMARK
-                                &trans     &trans    &none       &trans     &trans     &trans
+           &kp TILDE      &kp DOT          &kp ASTRK            &kp AMPS          &kp AT      &kp PRCNT  &kp LBKT          &kp LPAR        &kp RPAR               &kp RBKT
+           &hml LCTRL LT  &hml LSHFT PIPE  &hml LEFT_ALT MINUS  &hmr LEFT_GUI GT  &kp FSLH    &kp EXCL   &hmr RMETA COMMA  &hml RALT LBRC  &hmr RIGHT_SHIFT RBRC  &hmr RCTRL SEMI
+&kp UNDER  &kp GRAVE      &kp SQT          &kp DQT              &kp PLUS          &kp BSLH    &kp HASH   &kp CARET         &kp COLON       &kp EQUAL              &kp DLLR         &kp QMARK
+                                           &trans               &trans            &none       &trans     &trans            &trans
             >;
         };
 
