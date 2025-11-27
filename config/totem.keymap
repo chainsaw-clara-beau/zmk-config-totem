@@ -267,8 +267,8 @@
             display-name = "Lower";
             bindings = <
            &kp KP_MINUS  &kp N7  &kp N8  &kp N9  &kp KP_PLUS        &kp PRCNT  &kp UP_ARROW   &kp LPAR              &kp RPAR               &kp KP_DOT
-           &kp N0        &kp N4  &kp N5  &kp N6  &kp KP_EQUAL       &kp LEFT   &kp RIGHT_GUI  &hmr RIGHT_ALT RIGHT  &hmr RIGHT_SHIFT LBKT  &hmr RCTRL RBKT
-&kp COLON  &kp KP_SLASH  &kp N1  &kp N2  &kp N3  &kp KP_ASTERISK    &kp HOME   &kp PG_DN      &kp PG_UP             &kp END                &kp X            &kp B
+           &kp N0        &kp N4  &kp N5  &kp N6  &kp EQUAL          &kp LEFT   &kp RIGHT_GUI  &hmr RIGHT_ALT RIGHT  &hmr RIGHT_SHIFT LBKT  &hmr RCTRL RBKT
+&kp COLON  &kp KP_SLASH  &kp N1  &kp N2  &kp N3  &kp KP_ASTERISK    &kp HOME   &kp PG_DN      &dotcolon             &kp END                &kp X            &kp B
                                  &trans  &trans  &trans             &none      &trans         &trans
             >;
         };
