@@ -51,21 +51,21 @@
             compatible = "zmk,behavior-tap-dance";
             display-name = "Bluetooth Profile 0";
             #binding-cells = <0>;
-            bindings = <&macro_bt0>, <&bt BT_DISC 0>;
+            bindings = <&macro_bt0>, <&bt BT_CLR>;
         };
 
         bt1: bt_profile_1 {
             compatible = "zmk,behavior-tap-dance";
             display-name = "Bluetooth Profile 1";
             #binding-cells = <0>;
-            bindings = <&macro_bt1>, <&bt BT_DISC 1>;
+            bindings = <&macro_bt1>, <&bt BT_CLR>;
         };
 
         bt2: bt_profile_2 {
             compatible = "zmk,behavior-tap-dance";
             display-name = "Bluetooth Profile 2";
             #binding-cells = <0>;
-            bindings = <&macro_bt2>, <&bt BT_DISC 2>;
+            bindings = <&macro_bt2>, <&bt BT_CLR>;
         };
 
         sqtundr: shift_squote_underscore {
@@ -292,10 +292,10 @@
         adjust_layer {
             display-name = "Adjust";
             bindings = <
-            &kp F1        &kp F2        &kp F3        &kp F4        &kp F5          &kp F6          &kp F7          &kp F8           &kp F9           &kp F10
-            &kp LEFT_ALT  &none         &mkp MB2      &mkp MB1      &bt BT_CLR      &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &none            &kp F11
-&kp C_MUTE  &kp C_VOL_DN  &kp C_VOL_UP  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2    &msc SCRL_LEFT  &msc SCRL_DOWN  &msc SCRL_UP     &msc SCRL_RIGHT  &none    &kp F12
-                                        &none         &none         &none           &none           &none           &none
+            &kp F1        &kp F2        &kp F3    &kp F4    &kp F5        &kp F6          &kp F7          &kp F8           &kp F9           &kp F10
+            &kp LEFT_ALT  &none         &mkp MB2  &mkp MB1  &bt BT_CLR    &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &none            &kp F11
+&kp C_MUTE  &kp C_VOL_DN  &kp C_VOL_UP  &bt0      &bt1      &bt2          &msc SCRL_LEFT  &msc SCRL_DOWN  &msc SCRL_UP     &msc SCRL_RIGHT  &none    &kp F12
+                                        &none     &none     &none         &none           &none           &none
             >;
         };
 
