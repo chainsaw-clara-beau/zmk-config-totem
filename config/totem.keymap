@@ -218,7 +218,7 @@
             timeout-ms = <30>;
             key-positions = <13 12>; // SH
             layers = <0>;
-            bindings = <&kp GRAVE>;
+            bindings = <&kp LANG_ZENKAKUHANKAKU>;
         };
 
         combo_caps_word {
