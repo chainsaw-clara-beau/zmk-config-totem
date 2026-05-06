@@ -247,6 +247,11 @@
             timeout-ms = <60>;
             layers = <0>;
         };
+
+        right_alt {
+            bindings = <&kp RIGHT_ALT>;
+            key-positions = <16 17>;
+        };
     };
 
     conditional_layers { compatible = "zmk,conditional-layers"; };
