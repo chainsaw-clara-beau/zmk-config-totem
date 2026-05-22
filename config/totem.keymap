@@ -111,6 +111,16 @@
 
             label = "LAYER_MOUSE_THUMB";
         };
+
+        rpinky_i_ctrl: rpinky_i_ctrl {
+            compatible = "zmk,behavior-mod-morph";
+            label = "RPINKY_I_CTRL";
+            bindings = <&ltt 4 I>, <&kp LEFT_CONTROL>;
+
+            #binding-cells = <0>;
+            keep-mods = <(MOD_LCTL|MOD_LSFT|MOD_LALT|MOD_LGUI|MOD_RCTL|MOD_RSFT|MOD_RALT|MOD_RGUI)>;
+            mods = <(MOD_LCTL|MOD_LSFT|MOD_LALT|MOD_LGUI|MOD_RCTL|MOD_RGUI|MOD_RSFT|MOD_RALT)>;
+        };
     };
 
     macros {
@@ -266,8 +276,8 @@
             display-name = "Base";
             bindings = <
          &kp B         &kp L              &kp D            &kp W            &kp Z            &sqtundr      &kp F             &kp O             &kp U               &kp J
-         &hml LCTRL N  &hml LEFT_SHIFT R  &hml LEFT_ALT T  &hml LEFT_GUI S  &kp G            &kp Y         &hmr RIGHT_GUI H  &hmr RIGHT_ALT A  &hmr RIGHT_SHIFT E  &ltt 4 I
-&kp ESC  &kp Q         &kp X              &kp M            &kp C            &kp V            &kp K         &kp P             &dotcolon         &mindqt             &commsemi  &hmr RCTRL TAB
+         &hml LCTRL N  &hml LEFT_SHIFT R  &hml LEFT_ALT T  &hml LEFT_GUI S  &kp G            &kp Y         &hmr RIGHT_GUI H  &hmr RIGHT_ALT A  &hmr RIGHT_SHIFT E  &rpinky_i_ctrl
+&kp ESC  &kp Q         &kp X              &kp M            &kp C            &kp V            &kp K         &kp P             &dotcolon         &mindqt             &commsemi       &hmr RCTRL TAB
                                           &kp DELETE       &ltt 2 SPACE     &kp BACKSPACE    &ltt 1 ENTER  &lmt 1 MB1        &lmt 3 MB2
             >;
         };
