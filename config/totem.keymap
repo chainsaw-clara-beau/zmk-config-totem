@@ -262,6 +262,11 @@
             bindings = <&kp RIGHT_ALT>;
             key-positions = <16 17>;
         };
+
+        ctrl+grave {
+            bindings = <&kp LC(GRAVE)>;
+            key-positions = <24 23>;
+        };
     };
 
     conditional_layers { compatible = "zmk,conditional-layers"; };
