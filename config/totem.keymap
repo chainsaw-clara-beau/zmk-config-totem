@@ -149,7 +149,7 @@
             label = "WIN_SHIFT";
         };
 
-        ime_toggle: ime_toggle {
+        ime_toggle_hybrid: ime_toggle {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings =
@@ -158,7 +158,9 @@
                 <&macro_tap>,
                 <&kp GRAVE>,
                 <&macro_release>,
-                <&kp LEFT_ALT>;
+                <&kp LEFT_ALT>,
+                <&macro_tap>,
+                <&kp C_AC_NEXT_KEYBOARD_LAYOUT_SELECT>;
 
             label = "IME_TOGGLE";
         };
@@ -235,7 +237,7 @@
             timeout-ms = <30>;
             key-positions = <13 12>; // SH
             layers = <0>;
-            bindings = <&kp C_AC_NEXT_KEYBOARD_LAYOUT_SELECT>;
+            bindings = <&ime_toggle_hybrid>;
         };
 
         combo_caps_word {
